@@ -81,12 +81,12 @@ var diffy = Diffy.create({
   resolution: { x: SLICE_COUNT, y: 1 },
   sensitivity: .4,
   threshold: 7,
-  debug: false,
+  debug: true,
   containerClassName: 'my-diffy-container',
   sourceDimensions: { w: 130, h: 100 },
   onFrame: function (matrix) {
     for (let i = 0; i < slices.length; i ++) {
-      if(matrix[i][0] < 100) {
+      if(matrix[i][0] < 230) {
         let slice = slices[i];
         slice.react();
       }
